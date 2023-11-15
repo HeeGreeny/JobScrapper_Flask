@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hee_Jobs🪂</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css">
+  <link rel="stylesheet" href="{{url_for('static', filename='custom.css')}}">
+</head>
+<body>
+  <main class = 'container-fluid'>
+    <h2 style='text-align:right'> {{c_jobs}} results for "{{keyword.title()}}" jobs 💡 </h2>      
+    <h4><a target="_blank" href="/export?keyword={{keyword}}" role='button' style='float: center'>Export Results</a></h4>   
+    <figure>
+      <table role="grid">
+        <thead >
+          <tr>
+            <th><b>Position</b></th>
+            <th><b>Company</b></th>
+            <th><b>Location</b></th>
+            <th><b>Link</b></th>
+          </tr>
+        </thead>
+        <tbody>
+        {% for job in jobs %}
+          <tr>
+            <td><mark>{{job.position}}</mark></td>
+            <td>{{job.company}}</td>
+            <td>{{job.location}}</td>
+            <td><a href="{{job.link}}" target="_blank" role='link'><kbd>Apply</kbd></a></td>
+          </tr>
+        {% endfor %}
+        </tbody>
+      </table>
+    </figure>
+  </main>
+</body>
+</html>
+

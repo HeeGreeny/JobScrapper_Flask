@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hee_Jobs🪂</title>
+  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.classless.min.css">
+  <link rel="stylesheet" href="{{url_for('static',filename='custom.css')}}">
+  <link rel="shortcut icon" ref="favicon.ico">
+</head>
+<body>
+  <main id='ft2' class='container'>    
+    <h3 style='text-align:center'>FIND A JOB</h3>
+    <form class='main-search' action='/search' method="GET">
+      <input type ='text' name='keyword' placeholder='e.g."python"' required autofocus/>
+      <button>Search jobs</button>    
+    </form>
+    <figure class='ft1'>
+      <img src="/static/computer.jpg" alt='computer'>
+      <figcaption>Don't stay in the past. <a target="_blank" href="https://nomadcoders.co/python-for-beginners">Challenge yourself every day ➡️ </a></figcaption>
+    </figure>
+  </main>
+</body>
+</html>
+
